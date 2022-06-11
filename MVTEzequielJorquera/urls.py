@@ -1,8 +1,7 @@
 from django.contrib import admin
-from django.urls import path
-from MVTEstudioGrabacion.views import plantilla
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', plantilla),
+    path('MVTEstudioGrabacion/', include('MVTEstudioGrabacion.urls')),
 ]

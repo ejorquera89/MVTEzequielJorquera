@@ -1,0 +1,15 @@
+{% extends "MVTEstudioGrabacion/padre.html" %}
+{% load static %}
+
+{% block contenidoDinamico %}
+
+<h3> EMPLEADOS </h3>
+<form action = "{% url 'musicosForm' %}" method = "POST">{% csrf_token%}
+    <h1> Ingrese los datos del empleado </h1>
+   <table>
+       {{miFormulario.as_table}}
+   </table>
+    <input type = "submit" value="Enviar datos">
+</form>
+
+{% endblock%}

@@ -7,8 +7,8 @@ class Musico(models.Model):
     email = models.EmailField()
     instrumento = models.CharField(max_length=20)
 
-    #def __str__(self) -> str :
-        #return self.nombre + " " + str(self.camada)
+    def __str__(self) -> str :
+        return self.nombre + " " + str(self.apellido) + " --> " + str(self.instrumento)
 
 class Cantante(models.Model):
     nombre = models.CharField(max_length=40)
@@ -16,8 +16,8 @@ class Cantante(models.Model):
     email = models.EmailField()
     tipodevoz = models.CharField(max_length=15)
 
-    #def __str__(self) -> str:
-        #return self.nombre + " " + str(self.apellido)   
+    def __str__(self) -> str:
+        return self.nombre + " " + str(self.apellido) + " --> " + str(self. tipodevoz)   
 
 class Empleado(models.Model):
     nombre = models.CharField(max_length=40)
@@ -25,10 +25,13 @@ class Empleado(models.Model):
     email = models.EmailField()
     profesion = models.CharField(max_length=30)
 
-    #def __str__(self) -> str:
-        #return self.nombre + " " + str(self.apellido)
+    def __str__(self) -> str:
+        return self.nombre + " " + str(self.apellido) + " --> " + str(self.profesion)
 
 class Disco(models.Model):
     nombre = models.CharField(max_length=30)
     fechaDeEstreno = models.DateField()
     Productora = models.CharField(max_length=20)
+
+    def __str__(self) -> str:
+        return self.nombre + " --> " + str(self.Productora)

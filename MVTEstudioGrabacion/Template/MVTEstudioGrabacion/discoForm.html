@@ -4,7 +4,7 @@
 {% block contenidoDinamico %}
 
 <h3> DISCOS </h3>
-<form action = "{% url 'musicosForm' %}" method = "POST">{% csrf_token%}
+<form action = "{% url 'discoForm' %}" method = "POST">{% csrf_token%}
     <h1> Ingrese los datos del disco </h1>
    <table>
        {{miFormulario.as_table}}

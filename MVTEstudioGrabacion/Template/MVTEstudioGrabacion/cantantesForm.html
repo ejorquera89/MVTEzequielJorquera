@@ -4,7 +4,7 @@
 {% block contenidoDinamico %}
 
 <h3> CANTANTE </h3>
-<form action = "{% url 'musicosForm' %}" method = "POST">{% csrf_token%}
+<form action = "{% url 'cantantesForm' %}" method = "POST">{% csrf_token%}
     <h1> Ingrese los datos del cantante </h1>
    <table>
        {{miFormulario.as_table}}

@@ -24,5 +24,5 @@ class EmpleadoForm(forms.Form):
 class DiscoForm(forms.Form):
     nombre = forms.CharField(max_length=30)
     fechaDeEstreno = forms.DateField()
-    Productora = forms.CharField(max_length=20)
+    Productora = forms.CharField(max_length=30)
 

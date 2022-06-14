@@ -1,0 +1,12 @@
+{% extends "MVTEstudioGrabacion/padre.html" %}
+{% load static %}
+
+{% block contenidoDinamico %}
+<h3> BUSQUEDA DE MUSICOS </h3>
+
+<form action = "{% url 'buscar' %}" method = "GET"> 
+    <h1> Ingrese los datos del músico a buscar </h1>
+    <input type = "text" name = "nombre" placeholder = "NOMBRE" id = "nombre" >
+    <input type = "submit" value = "Buscar nombre">
+</form>
+{% endblock %}

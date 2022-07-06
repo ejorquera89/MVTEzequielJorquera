@@ -7,5 +7,8 @@
 
 {% block contenidoDinamico %}
 <h1> Musicos </h1>
+{% for musico in musicos %}
+    <li><h3> {{ musico }} </h3></li>
+{% endfor %}
 {% endblock %}
 

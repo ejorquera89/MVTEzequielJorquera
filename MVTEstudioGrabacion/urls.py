@@ -1,9 +1,9 @@
 from django.urls import path
-from MVTEstudioGrabacion.views import inicio, musicos, cantantes, empleados, discos, contacto, musicosForm, cantanteForm, empleadoForm, discoForm, busquedaMusico, buscar
+from MVTEstudioGrabacion.views import inicio, leerMusico, musicos, cantantes, empleados, discos, contacto, musicosForm, cantanteForm, empleadoForm, discoForm, busquedaMusico, buscar, leerMusico
 
 urlpatterns = [
     path('', inicio, name = 'inicio'),
-    path('musicos/', musicos, name = 'musicos'),
+    path('musicos/', leerMusico, name = 'musicos'),
     path('cantantes/', cantantes, name = 'cantantes'),
     path('empleados/', empleados, name = 'empleados'),
     path('discos/', discos, name = 'discos'),

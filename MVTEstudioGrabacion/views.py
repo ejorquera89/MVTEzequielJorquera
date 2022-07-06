@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.http import HttpResponse
 from django.shortcuts import render
 from MVTEstudioGrabacion.models import Musico, Cantante, Empleado, Disco
@@ -110,3 +111,8 @@ def buscar(request):
     else:
         respuesta = "No ha ingresado datos"
         return HttpResponse(respuesta)
+
+def leerMusico(request):
+    musicos = Musico.objects.all()
+    contexto = {'musicos': musicos}
+    return render (request, 'MVTEstudioGrabacion/musicos.html', contexto)

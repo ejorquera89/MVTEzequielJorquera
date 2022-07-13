@@ -9,6 +9,10 @@
 <h1> Musicos </h1>
 {% for musico in musicos %}
     <li><h3> {{ musico }} </h3></li>
+    <button>
+        <a href="{% url 'eliminarMusico' musico.nombre %}">Eliminar</a>
+        <a href="{% url 'editarMusico' musico.nombre %}">Editar</a>
+    </button>
 {% endfor %}
 {% endblock %}
 

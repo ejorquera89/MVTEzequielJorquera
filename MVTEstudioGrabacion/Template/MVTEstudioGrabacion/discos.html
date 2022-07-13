@@ -1,5 +1,17 @@
 {% extends "MVTEstudioGrabacion/padre.html"%}
 {% load static %}
+
+{% block seccion %}
+<h3> DISCOS </h3>
+{% endblock %}
+
 {% block contenidoDinamico %}
 <h1> Discos </h1>
+{% for disco in discos %}
+    <li><h3> {{ disco }} </h3></li>
+    <button>
+        <a href="{% url 'eliminarDisco' disco.nombre %}">Eliminar</a>
+        <a href="{% url 'editarDisco' disco.nombre %}">Editar</a>
+    </button>
+{% endfor %}
 {% endblock %}

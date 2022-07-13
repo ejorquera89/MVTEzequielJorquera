@@ -1,0 +1,18 @@
+{% extends "MVTEstudioGrabacion/padre.html"%}
+{% load static %}
+
+{% block seccion %}
+<h3> CANTANTES </h3>
+{% endblock %}
+
+{% block contenidoDinamico %}
+<h1> Editar cantante </h1>
+
+<form action="{% url 'editarCantante' nombre %}" method="POST">{% csrf_token %}
+    <table>
+        {{miFormulario.as_table}}
+    </table>
+    <input type="submit" value="Guardar">
+</form>
+
+{% endblock%}
